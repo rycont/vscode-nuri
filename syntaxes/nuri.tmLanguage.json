@@ -50,8 +50,34 @@
 			"match": "\\[.*?\\]"
 		},
 		"string": {
-			"name": "constant.character.nuri",
-			"match": "\\\".*?\\\""
+      "patterns": [{
+          "match": "(\\\")(.*?)(\\\")",
+          "captures": {
+            "1": {
+              "name": "keyword.operator.quote.double.begin.nuri"
+            },
+            "2": {
+              "name": "string.quoted.double.nuri"
+            },
+            "3": {
+              "name": "keyword.operator.quote.double.end.nuri"
+            }
+          }
+        },{
+          "match": "(\\')(.*?)(\\')",
+          "captures": {
+            "1": {
+              "name": "keyword.operator.quote.single.begin.nuri"
+            },
+            "2": {
+              "name": "string.quoted.single.nuri"
+            },
+            "3": {
+              "name": "keyword.operator.quote.single.end.nuri"
+            }
+          }
+        }
+      ]
 		},
 		"argument": {
 			"name": "keyword.operator.nuri",
