@@ -35,7 +35,7 @@
 				"match": "(만약|이라면|아니라면|순서대로)",
 				"name": "keyword.control.nuri"
 			}, {
-				"match": "^(상수|함수|형용사|동사)",
+				"match": "^(상수|함수|형용사|동사|구조체)",
 				"name": "keyword.control.nuri"
 			}]
 		},
@@ -76,7 +76,7 @@
 			"name": "support.type.property-name.nuri"
 		},
 		"function": {
-			"match": "(?<=((동사|함수)(.*?\\[.*?\\].*?)? ))[가-힣 ]*?(:|$)",
+			"match": "(?<=((동사|함수|구조체)(.*?\\[.*?\\].*?)? ))[가-힣 ]*?(:|$)",
 			"name": "entity.name.function.nuri"
 		}
 	},
