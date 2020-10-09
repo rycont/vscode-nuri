@@ -1,29 +1,43 @@
 {
-    "name": "nuri-lang",
-    "displayName": "nuri-lang",
-    "description": "Nuri language pack for VSCode",
-    "version": "0.0.1",
-    "publisher": "RyCont",
-    "repository": {
-        "url": "https://github.com/rycont/nuri-vscode"
-    },
-    "engines": {
-        "vscode": "^1.50.0"
-    },
-    "categories": [
-        "Programming Languages"
-    ],
-    "contributes": {
-        "languages": [{
-            "id": "nuri",
-            "aliases": ["Nuri 누리", "nuri"],
-            "extensions": ["nuri"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "nuri",
-            "scopeName": "source.nuri",
-            "path": "./syntaxes/nuri.tmLanguage.json"
-        }]
-    }
+	"name": "nuri-lang",
+	"displayName": "nuri-lang",
+	"description": "Nuri language pack for VSCode",
+	"version": "0.0.1",
+	"publisher": "RyCont",
+	"repository": {
+		"url": "https://github.com/rycont/nuri-vscode"
+	},
+	"engines": {
+		"vscode": "^1.50.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "nuri",
+				"aliases": [
+					"Nuri 누리",
+					"nuri"
+				],
+				"extensions": [
+					"nuri"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "nuri",
+				"scopeName": "source.nuri",
+				"path": "./syntaxes/nuri.tmLanguage.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "fd1847c2-11e5-4bca-bfe3-4846c7f470c8",
+		"publisherDisplayName": "RyCont",
+		"publisherId": "6643425a-4f77-405b-a140-c97b05311fa5"
+	}
 }
