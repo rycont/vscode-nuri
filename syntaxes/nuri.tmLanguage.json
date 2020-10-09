@@ -68,7 +68,7 @@
 			"match": "({|})"
 		},
 		"internalvalue": {
-			"match": "(없읍)",
+			"match": "(없음|참|거짓)",
 			"name": "entity.name.tag"
 		},
 		"josa": {
