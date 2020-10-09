@@ -18,7 +18,7 @@
         }],
         "grammars": [{
             "language": "nuri",
-            "scopeName": "app.nuri",
+            "scopeName": "source.nuri",
             "path": "./syntaxes/nuri.tmLanguage.json"
         }]
     }

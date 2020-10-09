@@ -3,30 +3,82 @@
 	"name": "Nuri 누리",
 	"patterns": [
 		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
+			"include": "#value"
 		}
 	],
 	"repository": {
-		"keywords": {
+		"value": {
 			"patterns": [{
-				"name": "keyword.control.nuri",
-				"match": "\\b(만약|이라면|아니라면|순서대로|상수|함수|형용사|)\\b"
+				"include": "#josa"
+			}, {
+				"include": "#comment"
+			}, {
+				"include": "#import"
+			},{
+				"include": "#function"
+			}, {
+				"include": "#keyword"
+			}, {
+				"include": "#constant"
+			}, {
+				"include": "#string"
+			}, {
+				"include": "#argument"
+			}, {
+				"include": "#number"
+			}, {
+				"include": "#internalvalue"
 			}]
 		},
-		"strings": {
-			"name": "string.quoted.double.nuri",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.nuri",
-					"match": "\\\\."
-				}
-			]
+		"keyword": {
+			"patterns": [{
+				"match": "(만약|이라면|아니라면|순서대로)",
+				"name": "keyword.control.nuri"
+			}, {
+				"match": "^(상수|함수|형용사|동사)",
+				"name": "keyword.control.nuri"
+			}]
+		},
+		"import": {
+			"name": "keyword.operator.nuri",
+			"match": "꾸러미"
+		},
+		"constant": {
+			"name": "constant.numeric.nuri",
+			"match": "\\[.*?\\]"
+		},
+		"string": {
+			"name": "constant.character.nuri",
+			"match": "\\\".*?\\\""
+		},
+		"argument": {
+			"name": "keyword.operator.nuri",
+			"match": "(와|과|으로|로|을|를|은|는|이|가|의) "
+		},
+		"number": {
+			"name": "constant.numeric.nuri",
+			"match": "\\d"
+		},
+		"comment": {
+			"name": "comment.line.nuri",
+			"match": "#.*?$"
+		},
+		"list": {
+			"name": "entity.name.section.nuri",
+			"match": "({|})"
+		},
+		"internalvalue": {
+			"match": "(없읍)",
+			"name": "entity.name.tag"
+		},
+		"josa": {
+			"match": "(?<=\\[.*?\\])[가-힣]*? ",
+			"name": "support.type.property-name.nuri"
+		},
+		"function": {
+			"match": "(?<=((동사|함수)(.*?\\[.*?\\].*?)? ))[가-힣 ]*?(:|$)",
+			"name": "entity.name.function.nuri"
 		}
 	},
-	"scopeName": "text.nuri"
+	"scopeName": "source.nuri"
 }
