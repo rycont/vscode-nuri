@@ -1,0 +1,25 @@
+{
+    "name": "nuri-lang",
+    "displayName": "nuri-lang",
+    "description": "Nuri language pack for VSCode",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.50.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "nuri",
+            "aliases": ["Nuri 누리", "nuri"],
+            "extensions": ["nuri"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "nuri",
+            "scopeName": "app.nuri",
+            "path": "./syntaxes/nuri.tmLanguage.json"
+        }]
+    }
+}

@@ -1,0 +1,32 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Nuri 누리",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.nuri",
+				"match": "\\b(만약|이라면|아니라면|순서대로|상수|함수|형용사|)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.nuri",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.nuri",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "text.nuri"
+}
