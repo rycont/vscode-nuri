@@ -23,6 +23,8 @@
 			}, {
 				"include": "#string"
 			}, {
+				"include": "#list"
+			}, {
 				"include": "#argument"
 			}, {
 				"include": "#number"
@@ -48,8 +50,48 @@
 			"match": "\\[.*?\\]"
 		},
 		"string": {
-			"name": "constant.character.nuri",
-			"match": "\\\".*?\\\""
+      "patterns": [{
+          "name": "string.quoted.double.nuri",
+          "match": "(\\\")(.*?)(\\\")",
+          "captures": {
+            "1": {
+              "name": "keyword.operator.quote.double.begin.nuri"
+            },
+            "2": {
+              "patterns": [{
+                "match": "\\\\[abfnrtv\\\\\\\"']",
+                "name": "constant.character.escape.nuri"
+              }]
+            },
+            "3": {
+              "name": "keyword.operator.quote.double.end.nuri"
+            }
+          }
+        },{
+          "name": "string.quoted.single.nuri",
+          "match": "(?x)(?<![\\p{Ll}_\\p{Lu}\\p{Lt}\\p{Nd}'])(')(?:[ㄱ-ㅎ가-힣\\ -\\[\\]-~]|(\\\\(?:NUL|SOH|STX|ETX|EOT|ENQ|ACK|BEL|BS|HT|LF|VT|FF|CR|SO|SI|DLE|DC1|DC2|DC3|DC4|NAK|SYN|ETB|CAN|EM|SUB|ESC|FS|GS|RS|US|SP|DEL|[abfnrtv\\\\\\\"'\\\\&]))|(\\\\o[0-7]+)|(\\\\x[0-9A-Fa-f]+)|(\\\\\\^[A-Z@\\[\\]\\\\\\^_]))(')",
+          "captures": {
+            "1": {
+              "name": "keyword.operator.quote.single.begin.nuri"
+            },
+            "2": {
+              "name": "constant.character.escape.nuri"
+            },
+            "3": {
+              "name": "constant.character.escape.oct.nuri"
+            },
+            "4": {
+              "name": "constant.character.escape.hex.nuri"
+            },
+            "5": {
+              "name": "constant.character.escape.control.nuri"
+            },
+            "6": {
+              "name": "keyword.operator.quote.single.end.nuri"
+            }
+          }
+        }
+      ]
 		},
 		"argument": {
 			"name": "keyword.operator.nuri",
