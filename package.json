@@ -1,6 +1,6 @@
 {
-	"name": "nuri-lang",
-	"displayName": "nuri-lang",
+	"name": "vscode-nuri",
+	"displayName": "vscode-nuri",
 	"description": "Nuri language pack for VSCode",
 	"version": "0.0.4",
 	"publisher": "RyCont",
