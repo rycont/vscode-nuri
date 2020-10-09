@@ -60,8 +60,14 @@
 			"match": "\\d"
 		},
 		"comment": {
-			"name": "comment.line.nuri",
-			"match": "#.*?$"
+			"patterns": [{
+				"name": "comment.line.nuri",
+				"match": "#.*?$"
+			}, {
+				"name": "comment.block.nuri",
+				"begin": "\\(\\*",
+				"end": "\\*\\)"
+			}]
 		},
 		"list": {
 			"name": "entity.name.section.nuri",

@@ -1,8 +1,8 @@
 {
-	"name": "vscode-nuri",
-	"displayName": "vscode-nuri",
+	"name": "nuri-lang",
+	"displayName": "nuri-lang",
 	"description": "Nuri language pack for VSCode",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"publisher": "RyCont",
 	"repository": {
 		"url": "https://github.com/rycont/vscode-nuri"
